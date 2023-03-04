@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const security());
+  runApp(const securityPage());
 }
 
-class security extends StatelessWidget {
-  const security({super.key});
+class securityPage extends StatelessWidget {
+  const securityPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold(body: Center(child: Text("securityPage")));
   }
 }
