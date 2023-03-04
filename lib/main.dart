@@ -24,7 +24,7 @@ void main() {
           titleLarge: TextStyle(color: Colors.white)),
       scaffoldBackgroundColor: const Color(0xFF121212),
       primaryColor: const Color(0xFF332940),
-      cardColor: const Color(0xFF86bbd8),
+      cardColor: const Color(0xFF121212),
       appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xFF121212),
           titleTextStyle: TextStyle(

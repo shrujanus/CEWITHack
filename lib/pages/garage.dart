@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import '../widget/info_card.dart';
+import 'package:line_icons/line_icons.dart';
+import 'package:ionicons/ionicons.dart';
 
 class garagePage extends StatelessWidget {
-  const garagePage({super.key});
+  garagePage({super.key});
+  bool isConnected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -26,41 +29,102 @@ class garagePage extends StatelessWidget {
                         children: [
                           const Text('Welcome to the Garage.',
                               style: TextStyle(fontSize: 35)),
-                          Image.asset(
-                            'assets/images/Car_gg.png',
-                            fit: BoxFit.cover,
-                            height: 250,
-                            width: 500,
-                          )
+                          Column(
+                            children: [
+                              Image.asset(
+                                'assets/images/Car_gg.png',
+                                fit: BoxFit.cover,
+                                height: 250,
+                                width: 500,
+                              ),
+                              isConnected
+                                  ? Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: const [
+                                        Icon(
+                                          Icons.signal_wifi_4_bar_outlined,
+                                          color: Color.fromARGB(255, 3, 186, 0),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 8.0),
+                                          child: Text('Connected'),
+                                        )
+                                      ],
+                                    )
+                                  : Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: const [
+                                        Icon(Icons.signal_wifi_bad_outlined,
+                                            color:
+                                                Color.fromARGB(255, 215, 0, 0)),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 8.0),
+                                          child: Text('Disconnected'),
+                                        )
+                                      ],
+                                    )
+                            ],
+                          ),
                         ],
                       ),
-                      info_card(title: 'title', icon: Icon(Icons.abc)),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
-                      Text('data'),
+                      info_card(
+                          title: 'Fuel Level',
+                          icon: const Icon(
+                            Icons.local_gas_station,
+                            color: Color(0xFF808080),
+                          ),
+                          value: '20'),
+                      info_card(
+                          title: 'Fuel Level',
+                          icon: const Icon(
+                            Icons.local_gas_station,
+                            color: Color(0xFF808080),
+                          ),
+                          value: '20'),
+                      info_card(
+                          title: 'Fuel Level',
+                          icon: const Icon(
+                            Icons.local_gas_station,
+                            color: Color(0xFF808080),
+                          ),
+                          value: '20'),
+                      info_card(
+                          title: 'Fuel Level',
+                          icon: const Icon(
+                            Icons.local_gas_station,
+                            color: Color(0xFF808080),
+                          ),
+                          value: '20'),
+                      info_card(
+                          title: 'Fuel Level',
+                          icon: const Icon(
+                            Icons.local_gas_station,
+                            color: Color(0xFF808080),
+                          ),
+                          value: '20'),
+                      info_card(
+                          title: 'Fuel Level',
+                          icon: const Icon(
+                            Icons.local_gas_station,
+                            color: Color(0xFF808080),
+                          ),
+                          value: '20'),
+                      info_card(
+                          title: 'Fuel Level',
+                          icon: const Icon(
+                            Icons.local_gas_station,
+                            color: Color(0xFF808080),
+                          ),
+                          value: '20'),
+                      info_card(
+                          title: 'Fuel Level',
+                          icon: const Icon(
+                            Icons.local_gas_station,
+                            color: Color(0xFF808080),
+                          ),
+                          value: '20'),
                     ],
                   ),
                 ),
